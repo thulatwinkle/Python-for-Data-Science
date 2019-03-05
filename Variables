@@ -1,0 +1,17 @@
+Variables:
+
+Variables are helpful to save value
+it is case sensitive
+
+Once you create (or declare) such a variable, you can later call up its value by typing the variable name.
+In Python, variables are used all the time. They help to make your code reproducible.
+
+
+type()
+returns the type of variable.
+there are int,float,double,str,bool
+str represents value in single or double quotes
+
+different type = different behaviour on same variable
+eg. 3 + 2 ans: 5
+   "ac" + "cd" ans:accd

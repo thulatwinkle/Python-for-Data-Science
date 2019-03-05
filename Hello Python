@@ -1,0 +1,17 @@
+Hello Python:
+
+you can use Python to build practically any piece of software. 
+How did this happen? 
+ 
+Python is open source. It's free to use. 
+It's very easy to build packages in Python, which is code that youcan share with other people to solve specific problems. more of these   package specifically built for data science have been developed.
+ 
+we focus on Python 3
+
+Python shell:
+a place where you can type Python code and immediately see the results.
+we're using IPython, short for Interactive Python.
+
+python scripts:
+These python scripts are simply text files with the extension .py. It's basically a list of Python commands that are executed.
+Putting your code in Python scripts instead of manually retyping every step interactively will help you to keep structure and avoid retyping everything over and over again if you want to make a change; you simply make the change in the script, and rerun the entire thing.

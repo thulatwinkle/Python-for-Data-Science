@@ -2,3 +2,19 @@ Ex1)
 
 Experiment in the IPython Shell; type 5 / 8, for example.
 Add another line of code to the Python script: print(7 + 10)
+
+
+EX2)
+
+Adding Comments:
+Use #
+eg. #testing addition
+    print(7+10)
+    
+EX3)
+
+Calculations:
+Apart from add,sub,multiply,divide, there is exponentiation and mod
+
+Exponentiation: **. This operator raises the number to its left to the power of the number to its right: for example 4**2 will give 16.
+Modulo: %. It returns the remainder of the division of the number to the left by the number on its right, for example 18 % 7 equals 4.

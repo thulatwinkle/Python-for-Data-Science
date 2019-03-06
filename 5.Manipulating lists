@@ -1,0 +1,54 @@
+Manipulating List:
+  Changing list elements
+  Adding list elements
+  Removing List elements
+  Copying the list
+  
+  fam = [ "liz" , 2.93 , "emma" , 3.32 , "mom" , 4.29 ]
+   index    0       1       2        3      4       5    
+
+Changing List elements:
+   It can be done using indices or slices.
+   eg. change fam[1]
+       fam[1]=1.29
+       
+       change fam[0:2]
+       fam[0:2] = ["sin",1.82]
+       
+Adding List elements:
+   To add list elements, + operator is used.
+   eg. Add "dad" to fam
+       fam = fam + ["dad"]
+       
+Deleting list elements:
+   del() is used to delete list elements.
+   eg. delete "mom" from list
+       del(fam[4])
+       
+Behind the scenes(1)
+
+  What actually happens when you create a new list
+
+  x = ["a","b","c"]
+  
+  you're storing a list in your computer memory, and store the 'address' of that list, so where the list is in your computer memory, in `x`. This means that `x` does not actually contain all the list elements, it rather contains a reference to the list.
+
+Copying the list:
+  when you use "=" to copy,
+  Let's store the list `x` as a new variable `y`, by simply using the equals sign:
+  y=x
+  Let's now change the element with index one in the list `y`, as follows:
+  y[1] = "z"
+  then when you check x
+  x= ["a","z","c"]
+  
+  because when you copied x to y with the equals sign, you copied the referenceto the list, not the actual values themselves. 
+  When you're updating an element the list, it's one and the same list in the computer memory your changing. 
+  Both `x` and `y` point to this list, so the update is visible from both.
+  
+  If you want to create a list `y` that points to a new list in the memory with the same variables, 
+    You can use the `list()`
+    y= list(x) => create new list y with elements of x
+    
+    use slicing to select all list elements explicitly
+    y=x[:]     => create new list y with elements of x

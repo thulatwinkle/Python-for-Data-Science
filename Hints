@@ -1,0 +1,9 @@
+* - repeats string:
+
+
+In [2]: "I said " + ("Hey " * 2) + "Hey!"
+Out[2]: 'I said Hey Hey Hey!'
+
+bool addition:
+In [4]: True + False
+Out[4]: 1

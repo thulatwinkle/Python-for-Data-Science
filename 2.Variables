@@ -15,3 +15,11 @@ str represents value in single or double quotes
 different type = different behaviour on same variable
 eg. 3 + 2 ans: 5
    "ac" + "cd" ans:accd
+
+Type Conversion:
+Using the + operator to paste together two strings can be very useful in building custom messages but you cannot simply sum strings and floats.
+you'll need to explicitly convert the types of your variables.
+str() = converts variable into str value
+int() =                        int       
+float()=                       float
+bool()=                        bool

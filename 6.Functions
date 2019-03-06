@@ -1,0 +1,22 @@
+Functions:
+   a function is a piece of reusable code, aimed at solving a particular task. 
+   You can call functions instead of having to write code yourself. 
+   
+max():
+  To find the maximum element in list
+  max(fam) => returns max element in fam
+  
+round():
+  To round the value
+  round(value, precision)
+  precision=>number of digits you want to keep after decimal
+  precision is optional argument=> not specified, rounds to closest integer
+  
+  eg.
+    round(1.68, 1)
+    1.7
+    
+    round(1.68)
+    2
+  
+  

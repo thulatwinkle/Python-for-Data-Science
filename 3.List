@@ -1,0 +1,17 @@
+list is also a datatype
+
+A list is a way to give a single name to a collection of values. 
+These values, or elements, can have any type; they can be floats, integer, booleans, strings, but also more advanced Python types, even lists.
+
+eg. 
+
+want to measure the height of everybody in your family, and store this information in python, it would be inconvenient to create a new python variable for each data point
+you collected right?
+What you can do instead, is store all this information in a python _list_. You can build such a list with square brackets. Suppose you asked your two sisters and parents for their height, in meters. You can build the list as follows:
+
+fam = [ 1.79 , 1.89 , 1.52]
+
+list can contain elements of different datatype
+it can contain list also.
+eg.
+fam = [[ "liz",1.79], ["sam",1.89], ["mac",1.52]]

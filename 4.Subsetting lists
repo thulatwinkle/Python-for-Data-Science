@@ -1,0 +1,48 @@
+Two ways of accessing the information in the list
+
+index:
+
+fam = [ "liz" , 2.93 , "emma" , 3.32 , "mom" , 4.29 ]
+index    0       1       2        3      4       5      
+-ve ind  -6     -5      -4        -3    -2      -1
+
+indexing:
+
+fam[3] = 3.32
+fam[5] = 4.29
+
+negative indexing: access elements from end of list
+
+fam[-1] = 4.29
+
+
+slicing:
+
+allows you to select multiple elements from a list, thus creating a new list. 
+You can do this by specifying a range, using a colon.
+
+fam = [ "liz" , 2.93 , "emma" , 3.32 , "mom" , 4.29 ]
+index    0       1       2        3      4       5      
+
+eg.
+IN   fam[3:5]
+OUT  [3.32 , "mom" ]
+
+[start :  end]
+ incl     excl
+
+only the elements with index 3 and 4, get returned. The element with index 5 is not included. 
+The index you specify before the colon, so where the slice starts, is included, while the index you specify after the colon, where the slice ends, is not.
+
+You can also choose to just leave out the index before or after the colon. 
+If you leave out the index where the slice should begin, you're telling Python to start the slice from index 0, like this example.
+
+IN   fam[:3]
+OUT  ["liz" , 2.93 , "emma" , 3.32]
+
+If you leave out the index where the slice should end, you include all elements up to and including the last element in the list, like here:
+
+IN   fam[4:]
+OUT  ["mom" , 4.29]
+
+

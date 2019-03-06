@@ -1,0 +1,69 @@
+ex1) indexing
+
+# Create the areas list
+areas = ["hallway", 11.25, "kitchen", 18.0, "living room", 20.0, "bedroom", 10.75, "bathroom", 9.50]
+
+# Print out second element from areas
+print(areas[1])
+
+# Print out last element from areas
+print(areas[-1])
+
+# Print out the area of the living room
+print(areas[5])
+
+Output:
+<script.py> output:
+    11.25
+    9.5
+    20.0
+    
+    
+ex2) Calculate using subset
+
+# Create the areas list
+areas = ["hallway", 11.25, "kitchen", 18.0, "living room", 20.0, "bedroom", 10.75, "bathroom", 9.50]
+
+# Sum of kitchen and bedroom area: eat_sleep_area
+eat_sleep_area = areas[3] + areas[7]
+
+# Print the variable eat_sleep_area
+print(eat_sleep_area)
+
+Output:
+<script.py> output:
+    28.75
+    
+    
+ex3)slicing
+
+# Create the areas list
+areas = ["hallway", 11.25, "kitchen", 18.0, "living room", 20.0, "bedroom", 10.75, "bathroom", 9.50]
+
+# Use slicing to create downstairs: first 6 elements  [0:6]
+downstairs = areas[:6]
+
+# Use slicing to create upstairs: last 4 elements
+upstairs = areas[-4:]
+
+# Print out downstairs and upstairs
+print(downstairs)
+print(upstairs)
+
+Output:
+<script.py> output:
+    ['hallway', 11.25, 'kitchen', 18.0, 'living room', 20.0]
+    ['bedroom', 10.75, 'bathroom', 9.5]
+    
+
+ex4)Access elements in sublist
+
+x = [["a", "b", "c"],
+     ["d", "e", "f"],
+     ["g", "h", "i"]]
+     
+In [3]: x[2][0]
+Out[3]: 'g'
+
+In [4]: x[2][:2]
+Out[4]: ['g', 'h']

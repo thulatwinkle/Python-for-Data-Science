@@ -7,3 +7,6 @@ Out[2]: 'I said Hey Hey Hey!'
 bool addition:
 In [4]: True + False
 Out[4]: 1
+
+Documentation:refer python 3
+https://docs.python.org/3/library/stdtypes.html#numeric-types-int-float-complex

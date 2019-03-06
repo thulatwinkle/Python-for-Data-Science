@@ -46,3 +46,15 @@ IN   fam[4:]
 OUT  ["mom" , 4.29]
 
 
+Access elements in sublist
+
+
+x = [["a", "b", "c"],
+     ["d", "e", "f"],
+     ["g", "h", "i"]]
+     
+In [3]: x[2][0]
+Out[3]: 'g'
+
+In [4]: x[2][:2]
+Out[4]: ['g', 'h']

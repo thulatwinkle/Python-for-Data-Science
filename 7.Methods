@@ -31,6 +31,14 @@ append()
    Python doesn't generate an output, 
    but list will updated with a value
    eg. fam.append("me")  =>  fam has extentednded with "me"
+   
+remove()
+   that removes the first element of a list that matches the input
+   eg. fam.remove(1.89)
+   
+reverse()
+   that reverses the order of the elements in the list it is called on.
+   eg. fam.reverse()
  
  Str Methods:
  
@@ -44,6 +52,13 @@ append()
     strvar.replace("str char to be replaced" , " str chars replaced by")
     eg. x="liz
         x.replace("z" , "sa")  => liza
-        
+ 
+ count()
+   count no of specified chars in string
+   eg. x.count(i)   => 1
+   
+ upper()
+    converts the string into upper case
+    eg. x.upper()  => LIZA
  
         

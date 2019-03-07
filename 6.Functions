@@ -19,4 +19,36 @@ round():
     round(1.68)
     2
   
+min():
+  returns the min value in the list
+  eg. min(fam)
+  
+help():
+  opens up the documentations of any function in python
+  eg. help(min)
+  or  ?min
+  
+complex():
+  complex(real[, imag]) -> complex number
+   
+   Create a complex number from a real part and an optional imaginary part.
+   This is equivalent to (real + imag*1j) where imag defaults to 0.
+   
+sorted():
+   sorted(iterable, key=None, reverse=False)
+    Return a new list containing all items from the iterable in ascending order.
+
+    reverse = true =>descend order
+    iterable => list to be sorted
+    
+len():
+  returns the number of items in the list
+  eg. len(fam)
+Other function:
+type()
+int()
+float()
+str()
+print()
+
   

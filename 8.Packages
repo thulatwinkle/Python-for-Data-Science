@@ -1,0 +1,28 @@
+Packages:
+  Package is a directory of python script.
+  Each script is a module that specifies functions,methods and types
+  Available in internet
+    numpy  => work with arrays
+    matplotlib => data visualization
+    scikit-learn => machine learning
+  not availaible in default, to be installed
+  
+Install packages in system
+    use pip, a package maintenance system for Python.
+    Download pip file
+    Download get-pip.py
+    Go to terminal
+       python3 get-pip.py
+       pip3 install numpy
+       
+Import packages in script
+    import numpy => import entire numpy package
+    to call function in numpy package
+      numpy.array([1,2,3,4])  => using numpy is important
+    import numpy as np => uses np instead of numpy
+    
+import specific functions from package:
+     from numpy import array => array[1,2,3,4] => no error
+     
+      
+    

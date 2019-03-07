@@ -1,0 +1,49 @@
+Methods:
+
+_functions_ that "belong to" Python objects. 
+A Python object of 
+type string has methods, such as capitalize() and replace()
+type float has bit_length(), conjugate()
+type list has count(),index()
+
+in Python, everything is an object, and each object has specific methods associated. 
+Depending on the type of the object, list, string, float, whatever, the available methods are different.
+
+Objects of different types can have methods with the same name: 
+
+Take the `index()` method. It's available for both strings and lists. 
+If you call it on a string, you get the index of the letters in the string; 
+If you call it on a list, you get the index of the element in the list.
+This means that, depending on the type of the object, the methods behave differently.
+
+List methods:
+
+index()
+  returns the index of the specified elements
+  eg. fam.index("mom")
+
+count()
+  returns the number of times the specified element occurs in the list
+  eg. fam.count(2.85)
+  
+Some methods can change the objects they are called on. 
+append()
+   Python doesn't generate an output, 
+   but list will updated with a value
+   eg. fam.append("me")  =>  fam has extentednded with "me"
+ 
+ Str Methods:
+ 
+ capitilize()
+   capitize the first letter of the String
+   eg. x="liz"
+       x.capitilize() =>  Liz
+  
+  replace()
+    replace the letters in the string
+    strvar.replace("str char to be replaced" , " str chars replaced by")
+    eg. x="liz
+        x.replace("z" , "sa")  => liza
+        
+ 
+        

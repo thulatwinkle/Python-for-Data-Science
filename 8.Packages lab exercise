@@ -1,0 +1,51 @@
+ex1) circumference and area
+
+For a fancy clustering algorithm, you want to find the circumference C and area A of a circle. When the radius of the circle is r, you can calculate C and A as:
+
+C=2πr
+A=πr2
+
+# Definition of radius
+r = 0.43
+
+# Import the math package
+import math
+
+# Calculate C
+C = math.pi*2*r
+
+# Calculate A
+A = math.pi*r**2
+
+# Build printout
+print("Circumference: " + str(C))
+print("Area: " + str(A))
+
+Output:
+<script.py> output:
+    Circumference: 2.701769682087222
+    Area: 0.5808804816487527
+    
+ex2)selective import
+Perform a selective import from the math package where you only import the radians function.
+Calculate the distance travelled by the Moon over 12 degrees of its orbit. Assign the result to dist. You can calculate this as r∗ϕ, where r is the radius and ϕ is the angle in radians. To convert an angle in degrees to an angle in radians, use the radians() function, which you just imported.
+Print out dist.
+
+# Definition of radius
+r = 192500
+
+# Import radians function of math package
+from math import radians
+
+# Travel distance of Moon if 12 degrees. Store in dist.
+dist = r * radians(12)
+
+# Print out dist
+print(dist)
+
+Output:
+<script.py> output:
+    40317.10572106901
+    
+
+ex3)

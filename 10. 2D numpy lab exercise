@@ -1,0 +1,116 @@
+ex1) 2D Numpy Array
+# Create baseball, a list of lists
+baseball = [[180, 78.4],
+            [215, 102.7],
+            [210, 98.5],
+            [188, 75.2]]
+
+# Import numpy
+import numpy as np
+
+# Create a 2D Numpy array from baseball: np_baseball
+np_baseball = np.array(baseball)
+
+# Print out the type of np_baseball
+print(type(np_baseball))
+
+# Print out the shape of np_baseball
+print(np_baseball.shape)
+
+Output:
+<script.py> output:
+    [[180.   78.4]
+     [215.  102.7]
+     [210.   98.5]
+     [188.   75.2]]
+    (4, 2)
+
+<script.py> output:
+    <class 'numpy.ndarray'>
+    (4, 2)
+
+
+ex2)
+# baseball is available as a regular list of lists
+
+# Import numpy package
+import numpy as np
+
+# Create a 2D Numpy array from baseball: np_baseball
+np_baseball = np.array(baseball)
+
+# Print out the shape of np_baseball
+print(np_baseball)
+print(np_baseball.shape)
+
+Output:
+<script.py> output:
+    [[ 74 180]
+     [ 74 215]
+     [ 72 210]
+     ...
+     [ 75 205]
+     [ 75 190]
+     [ 73 195]]
+    (1015, 2)
+
+
+ex3)Subset
+# baseball is available as a regular list of lists
+
+# Import numpy package
+import numpy as np
+
+# Create np_baseball (2 cols)
+np_baseball = np.array(baseball)
+
+# Print out the 50th row of np_baseball
+print(np_baseball[49,:])
+
+# Select the entire second column of np_baseball: np_weight
+np_weight = np_baseball[:,1]
+
+# Print out height of 124th player
+print(np_baseball[123,0])
+
+Output:
+<script.py> output:
+    [ 70 195]
+    75
+    
+ 
+ex4)Arithmetic
+# baseball is available as a regular list of lists
+# update is available as 2D Numpy array
+
+# Import numpy package
+import numpy as np
+
+# Create np_baseball (3 cols)
+np_baseball = np.array(baseball)
+
+# Print out addition of np_baseball and update
+print(np_baseball + update)
+
+# Create Numpy array: conversion
+conversion = np.array([0.0254,0.453592,1])
+
+# Print out product of np_baseball and conversion
+print(np_baseball * conversion)
+
+Output:
+<script.py> output:
+    [[ 75.2303559  168.83775102  23.99      ]
+     [ 75.02614252 231.09732309  35.69      ]
+     [ 73.1544228  215.08167641  31.78      ]
+     ...
+     [ 76.09349925 209.23890778  26.19      ]
+     [ 75.82285669 172.21799965  32.01      ]
+     [ 73.99484223 203.14402711  28.92      ]]
+    [[ 1.8796  81.64656 22.99   ]
+     [ 1.8796  97.52228 34.69   ]
+     [ 1.8288  95.25432 30.78   ]
+     ...
+     [ 1.905   92.98636 25.19   ]
+     [ 1.905   86.18248 31.01   ]
+     [ 1.8542  88.45044 27.92   ]]

@@ -1,0 +1,36 @@
+numpy array  -> data of same type
+data frame  -> data of different type
+
+pandas:
+ pandas is a package in which data is stored as data frame
+ data frame is similar to table
+ 
+import data frame from csv
+
+import pandas as pd
+brics= pd.read_csv("Path\brics.csv")
+
+row and coln index( to indicate data frame has row and column labels)
+brics= pd.read_csv("path\brics.csv",index_coln="0")
+
+Column access:
+brics[Colunlabel1]
+or
+brics.colnlabel1
+
+Add column:
+brics["new coln"] = [1,2,3,4]
+or
+brics["density"] = brics["coln1"] +brics["coln2"]
+
+Row access:
+brics.loc["rowindex1"]
+
+element access:
+brics.loc["rowind1","colnind"]
+or
+brics["colind"].loc["rowind"]
+or
+brics.loc["rowind1"]["colnind"]
+
+ 

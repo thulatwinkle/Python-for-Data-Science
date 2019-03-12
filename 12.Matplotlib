@@ -32,3 +32,21 @@ Histogram:
  
 Customization:
 You can change colors, shapes, labels, axes,
+
+label axes:
+plt.xlabel('year')
+plt.ylabel('population')
+
+Add title:
+plt.title('World Pop chart')
+
+change the ticks on the y-axis:
+It should be clear that we are talking about billions. 
+the axis should start at zero
+plt.yticks([0,2,4,6], ['0B','2B','4B','6B']
+
+fill between:
+fill the area till 0
+plt.fill_between(year,population,0,color='green')
+
+

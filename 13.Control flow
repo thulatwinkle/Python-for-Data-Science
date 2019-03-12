@@ -1,0 +1,26 @@
+Relational operators:
+operators that results in boolean
+==
+<=
+>=
+<
+>
+!=
+
+logical operator:
+combining booleans
+and 
+or
+not
+
+control flow( 4 spaces indent)
+if
+else
+elif
+
+if condition:
+    expression
+elif condition:
+    expression
+else:
+    expression

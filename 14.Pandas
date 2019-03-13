@@ -33,4 +33,7 @@ brics["colind"].loc["rowind"]
 or
 brics.loc["rowind1"]["colnind"]
 
- 
+select column and row as series and datframe
+cars['cars_per_cap']
+cars[['cars_per_cap']] 
+The single bracket version gives a Pandas Series, the double bracket version gives a Pandas DataFrame.

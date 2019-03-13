@@ -1,0 +1,109 @@
+ex1) csv to data frame:
+# Import pandas as pd
+import pandas as pd
+
+# Import the cars.csv data: cars
+cars = pd.read_csv("cars.csv")
+
+# Print out cars
+print(cars)
+
+<script.py> output:
+      Unnamed: 0  cars_per_cap        country drives_right
+    0         US           809  United States         True
+    1        AUS           731      Australia        False
+    2        JAP           588          Japan        False
+    3         IN            18          India        False
+    4         RU           200         Russia         True
+    5        MOR            70        Morocco         True
+    6         EG            45          Egypt         True
+    
+    
+ex2)Add index
+# Import pandas as pd
+import pandas as pd
+
+# Fix import by including index_col
+cars = pd.read_csv('cars.csv',index_col = 0)
+
+# Print out cars
+print(cars)
+
+<script.py> output:
+         cars_per_cap        country drives_right
+    US            809  United States         True
+    AUS           731      Australia        False
+    JAP           588          Japan        False
+    IN             18          India        False
+    RU            200         Russia         True
+    MOR            70        Morocco         True
+    EG             45          Egypt         True
+    
+    
+ex3)print in series and dat frames
+# Import cars data
+import pandas as pd
+cars = pd.read_csv('cars.csv', index_col = 0)
+
+# Print out country column as Pandas Series
+print(cars['country'])
+
+# Print out country column as Pandas DataFrame
+print(cars[['country']])
+
+<script.py> output:
+    US     United States
+    AUS        Australia
+    JAP            Japan
+    IN             India
+    RU            Russia
+    MOR          Morocco
+    EG             Egypt
+    Name: country, dtype: object
+               country
+    US   United States
+    AUS      Australia
+    JAP          Japan
+    IN           India
+    RU          Russia
+    MOR        Morocco
+    EG           Egypt
+    
+    
+ ex4)print the row elements
+ # Import cars data
+import pandas as pd
+cars = pd.read_csv('cars.csv', index_col = 0)
+
+# Print out observation for Japan
+print(cars.loc['JAP'])
+
+# Print out observations for Australia and Egypt
+print(cars.loc[['AUS','EG']])
+
+
+<script.py> output:
+    cars_per_cap      588
+    country         Japan
+    drives_right    False
+    Name: JAP, dtype: object
+         cars_per_cap    country drives_right
+    AUS           731  Australia        False
+    EG             45      Egypt         True
+
+
+ex5)print row and col elements
+import pandas as pd
+cars = pd.read_csv('cars.csv', index_col = 0)
+
+# Print out drives_right value of Morocco
+print(cars.loc['MOR','drives_right'])
+
+# Print sub-DataFrame
+print(cars.loc[['RU','MOR'], ['country','drives_right']])
+
+<script.py> output:
+    True
+         country drives_right
+    RU    Russia         True
+    MOR  Morocco         True

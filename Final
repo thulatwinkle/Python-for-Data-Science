@@ -1,0 +1,184 @@
+1. recent_grads = pd.read_csv(...csv)
+   recent_grads.shape  => returns number of rows and column
+   
+2.# Print .dtypes
+print(recent_grads.dtypes)
+
+# Output summary statistics
+print(recent_grads.describe())
+
+# Exclude data of type object(print summary stats wexcluding object)
+print(recent_grads.describe(exclude=['object']))
+
+
+3.unique()=> return unique value of array or datframe
+Look at the dtypes of the columns in columns to make sure that the data is numeric.
+It looks like a string is being used to encode missing values. Use the .unique() method to figure out what the string is.
+Search for missing values in the median, p25th, and p75th columns.
+Replace the found missing values with a NaN value, using numpy's np.nan.
+
+# Names of the columns we're searching for missing values 
+columns = ['median', 'p25th', 'p75th']
+
+# Take a look at the dtypes
+print(recent_grads[columns].dtypes)
+
+# Find how missing values are represented
+print(recent_grads["median"].unique())
+
+# Replace missing values with NaN
+for column in columns:
+    recent_grads.loc[recent_grads[column] == 'UN', column] = np.nan
+    
+<script.py> output:
+    median    object
+    p25th     object
+    p75th     object
+    dtype: object
+    ['110000' '75000' '73000' '70000' '65000' 'UN' '62000' '60000' '58000'
+     '57100' '57000' '56000' '54000' '53000' '52000' '51000' '50000' '48000'
+     '47000' '46000' '45000' '44700' '44000' '42000' '41300' '41000' '40100'
+     '40000' '39000' '38400' '38000' '37500' '37400' '37000' '36400' '36200'
+     '36000' '35600' '35000' '34000' '33500' '33400' '33000' '32500' '32400'
+     '32200' '32100' '32000' '31500' '31000' '30500' '30000' '29000' '28000'
+     '27500' '27000' '26000' '25000' '23400' '22000']
+     
+4.max of column
+# Import numpy
+import numpy as np
+
+# Use max to output maximum values
+max_sw = np.max(sw_col)
+
+# Print column max
+print(max_sw)
+
+o/p=>34324
+
+5.output row of max
+# Output the row containing the maximum percentage of women
+print(recent_grads[sw_col == max_sw])
+
+
+<script.py> output:
+         rank  major_code                        major             major_category  \
+    162   163        5502  ANTHROPOLOGY AND ARCHEOLOGY  Humanities & Liberal Arts   
+    
+         total  sample_size   men  women  sharewomen  employed      ...        \
+    162  38844          247  1167  36422    0.968954     29633      ...         
+    
+         part_time  full_time_year_round  unemployed  unemployment_rate  median  \
+    162      14515                 13232        3395           0.102792   28000   
+    
+         p25th  p75th college_jobs  non_college_jobs  low_wage_jobs  
+    162  20000  38000         9805             16693           6866  
+    
+    [1 rows x 21 columns]
+    
+5.dataframe into array=> dataframe.values() 
+# Convert to numpy array
+recent_grads_np = recent_grads[['unemployed','low_wage_jobs']].values
+
+
+# Print the type of recent_grads_np
+print(type(recent_grads_np))
+
+6.
+# Calculate correlation matrix
+print(np.corrcoef(recent_grads_np[:,0],recent_grads_np[:,1]))
+
+
+7.least 5 rows
+# Make all gender difference values positive
+recent_grads['gender_diff'] = abs(recent_grads.gender_diff)
+
+# Find the 5 rows with lowest gender rate difference
+print(recent_grads.nsmallest(5,'gender_diff'))
+
+
+8.Filtering rows
+# Rows where gender rate difference is greater than .30 
+diff_30 = recent_grads.gender_diff > .30
+
+# Rows with more men
+more_men = recent_grads.men > recent_grads.women
+
+# Combine more_men and diff_30
+more_men_and_diff_30 = np.logical_and(more_men,diff_30)
+
+# Find rows with more men and and gender rate difference greater than .30
+fewer_women = recent_grads[more_men_and_diff_30==True]
+
+
+9.groupby
+# Group by major category and count
+print(recent_grads.groupby(['major_category']).major_category.count())
+
+10.groupby based on two columns
+# Find average number of low wage jobs and unemployment rate of each major category
+dept_stats = recent_grads.groupby(['major_category'])['low_wage_jobs', 'unemployment_rate'].mean()
+print(dept_stats)
+
+11.Scatter(red triangle)
+# Plot the red and triangle shaped scatter plot  
+plt.scatter(unemployment_rate,low_wage_jobs,color="r",marker="^")
+
+# Display the visualization
+plt.show()
+
+
+12.Plotting with pandas: plot(kind='scatter',x='',y='')
+
+# Import matplotlib and pandas
+import matplotlib.pyplot as plt
+import pandas as pd
+
+# Create scatter plot
+dept_stats.plot(kind='scatter', x='unemployment_rate', y='low_wage_jobs')
+plt.show()
+
+# Create histogram
+recent_grads.sharewomen.plot(kind='hist')
+plt.show()
+
+
+13.bar plot with groupby
+
+First, create a DataFrame to plot. Use recent_grads to make a DataFrame that reports each major category and the number of college graduates with a job that doesn't require a degree. Assign this to a variable named df.
+Plot this data as a bar chart using the .plot() method. Here, kind should be "bar".
+Display the plot you've created!
+# DataFrame of non-college job sums
+df = recent_grads.groupby(['major_category']).non_college_jobs.sum()
+
+# Plot bar chart
+df.plot(kind="bar")
+
+# Show graph
+plt.show()
+
+
+14.groupby with two columns and a plot
+
+# DataFrame of college and non-college job sums
+df1 = recent_grads.groupby(['major_category'])['college_jobs','non_college_jobs'].sum()
+# Plot bar chart
+df1.plot(kind="bar")
+
+# Show graph
+plt.show()
+
+15.Drop missing values from dataframe => df1.dropna(axis=0,inplace=True)
+
+16.convert into numeric value=>pd.to_numeric()
+
+# Convert to numeric and divide by 1000
+recent_grads['median'] = pd.to_numeric(recent_grads['median'])/1000
+recent_grads['p25th'] = pd.to_numeric(recent_grads['p25th'])/1000
+recent_grads['p75th'] = pd.to_numeric(recent_grads['p75th'])/1000
+
+# Select averages by major category
+columns = ['median', 'p25th', 'p75th']
+sal_quantiles = recent_grads.groupby(['major_category'])['median','p25th','p75th'].mean()
+
+
+17.Subplots,Xticks and Yticks
